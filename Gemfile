@@ -13,3 +13,7 @@ gem 'jquery-rails', '2.0.2'
 gem 'kaminari', '0.13.0'
 
 gem 'my_generators', :group => :development, :git => 'git://github.com/alobato/my_generators.git'
+
+gem "capistrano", "2.12.0"
+gem "unicorn", "4.3.1"
+gem "net-ssh", "2.4.0"
