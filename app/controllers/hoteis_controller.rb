@@ -9,6 +9,23 @@ class HoteisController < ApplicationController
     render layout: nil
   end
 
+  def busca
+    tipo = ""
+    tipo = "#{params["tipo"]}-" unless params["tipo"].blank?
+    
+    cidade = ""
+    cidade = "#{params["cidade"]}" unless params["cidade"].blank?
+    
+    estado = ""
+    if cidade.blank?
+      estado = "#{params["estado"]}" unless params["estado"].blank?
+    end
+    
+    url = "#{tipo}#{cidade}#{estado}"
+    
+    redirect_to "/#{url}.aspx"
+  end
+
   def by_state
     states = {
       'ac' => ['Acre', 'no'],
@@ -52,7 +69,7 @@ class HoteisController < ApplicationController
     types = %w(pousadas hoteis-fazenda moteis albergues flats resorts spas campings apart-hoteis alugueis-temporada hoteis)
     types.each do |type|
       if slug.include?("#{type}-")
-        hotel_type = get_by_type(type).first
+        hotel_type = type
         slug = slug.gsub("#{type}-", '')
         @host_type = get_by_type(type).last
       end
@@ -65,7 +82,7 @@ class HoteisController < ApplicationController
     @state_prep = states[slug].last
     @cities = City.where(:state => @state_slug)
     @hotels = Hotel.where(state: slug).order('priority DESC, id ASC')
-    @hotels = @hotels.where(hotel_type: hotel_type) if hotel_type
+    @hotels = @hotels.where(hotel_type_slug: hotel_type) if hotel_type
     @hotels = @hotels.page(page).per(20)
   end
 
@@ -82,7 +99,7 @@ class HoteisController < ApplicationController
     types = %w(pousadas hoteis-fazenda moteis albergues flats resorts spas campings apart-hoteis alugueis-temporada hoteis)
     types.each do |type|
       if slug.include?("#{type}-")
-        hotel_type = get_by_type(type).first
+        hotel_type = type
         slug = slug.gsub("#{type}-", '')
         @host_type = get_by_type(type).last
       end
@@ -96,7 +113,7 @@ class HoteisController < ApplicationController
     @city_prep = 'em'
     @city_prep = 'no' if @city_name == 'Rio de Janeiro'
     @hotels = Hotel.where(city: @city_name).order('priority DESC, id ASC')
-    @hotels = @hotels.where(hotel_type: hotel_type) if hotel_type
+    @hotels = @hotels.where(hotel_type_slug: hotel_type) if hotel_type
     @hotels = @hotels.page(page).per(20)
   end
 

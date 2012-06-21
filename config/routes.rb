@@ -8,6 +8,8 @@ HoteisNow::Application.routes.draw do
   get "/default", :to => 'hoteis#home'
   get "/fale-conosco", :to => 'hoteis#fale'
   
+  post "/busca", :to => 'hoteis#busca'
+  
   get "/:id", :to => "hoteis#by_city", :as => :by_city, :constraints => lambda { |req|
     city_slugs.each do |city|
       types.each do |type|

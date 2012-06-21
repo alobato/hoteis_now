@@ -7,10 +7,10 @@
     paginator:     the paginator that renders the pagination tags inside
 -%>
 <%= paginator.render do -%>
-
+<div id="paginacao">
 Página de resultados:
 <% each_page do |page| -%>
   <%= page_tag page %>
 <% end -%>
-
+</div>
 <% end -%>
