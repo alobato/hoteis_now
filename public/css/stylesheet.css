@@ -1,0 +1,527 @@
+﻿body
+{
+	text-align: center;
+
+	background: #999 url("../imagens/fundo.gif");
+	font-family: arial, helvetica, sans-serif;
+}
+
+form
+{
+	margin: 0;
+	padding: 0;
+}
+
+#container
+{
+	position: relative;
+	margin: 0 auto;
+	overflow: hidden;
+	width: 720px;
+	text-align: left;
+
+	background-color: #fff;
+	border: solid 1px #666;
+}
+
+#header
+{
+	position: relative;
+	padding: 15px 0px 25px 10px;
+}
+
+	#logo 
+	{
+		width: 230px;
+	}
+
+	#banner 
+	{
+        position: absolute;
+        top: 5px;
+        right: 5px;
+		width: 468px;
+	}
+	
+#footer
+{
+
+}
+
+#content 
+{	
+
+}
+
+#main
+{
+	position: relative;
+
+}
+
+/*----------------------*/
+
+#navigation
+{
+
+}
+
+	#navigation ul
+	{
+		margin: 0;
+		padding: 0;
+	}
+
+	#navigation ul li
+	{
+		display: inline;
+	}
+	
+	#navigation ul li a
+	{
+		float: left;
+	}
+	
+	#navigation ul li span
+	{
+		float: left;
+	}
+	
+#navigation #navbase
+{
+	clear: left;
+	height: 24px;
+	background: #ACC2D3 url(../imagens/barrasombra.gif) repeat-x bottom;
+	
+	padding-left: 10px;
+	margin-bottom: 12px;
+	font-weight: bold;
+	font-size: 70%;
+	line-height: 18px;
+}
+
+/*----------------------*/
+
+#secondary-nav
+{
+	position: absolute;
+	top: 77px;
+	right: 0px;
+}
+
+	#secondary-nav ul
+	{
+		margin: 0;
+		padding: 0;
+	}
+
+	#secondary-nav ul li
+	{
+		display: inline;
+	}
+
+	#secondary-nav ul li a
+	{
+		float: left;
+		
+		padding: 2px 3px;
+		border: solid 1px #FFF;
+		background-color: #ECECEC;
+		font-size: 70%;
+	}
+	
+	#secondary-nav ul li span
+	{
+		float: left;
+
+		padding: 2px 3px;
+		border: solid 1px #FFF;
+		background-color: #ECECEC;
+		font-size: 70%;
+	}
+
+/*----------------------*/
+
+#breadcrumb 
+{
+	position: absolute;
+	top: 0px;
+	right: 20px;
+	
+	padding-top: 4px;
+	background: url(../imagens/linha.gif) no-repeat top left;		
+	text-align: right;
+	font-size: 70%;
+}
+
+/*----------------------*/
+/* BOX 1 */
+
+/* Show only to IE PC \*/
+* html .boxhead h2 {height: 1%;} /* For IE 5 PC */
+
+.box1
+{
+	/*float: left;*/
+	/*margin: 0 auto; center for now */
+	position: absolute;
+
+	width: 200px;
+	background: url(../imagens/sbbody-r.gif) no-repeat bottom right;
+}
+
+	.box1 .boxhead
+	{
+		margin: 0;
+		padding: 0;
+		background: url(../imagens/sbhead-r.gif) no-repeat top right;
+		text-align: left;
+	}
+	
+		.box1 .boxhead h2
+		{
+			margin: 0;
+			padding: 5px 30px 3px 24px;
+			color: black;
+			border-bottom: solid 1px #7F7F7F;
+			background: url(../imagens/sbhead-l.gif) no-repeat top left;
+			line-height: 1em;
+			font-weight: bold; 
+			font-size: 75%;
+			font-family: arial;
+		}
+
+	.box1 .boxbody
+	{
+		margin: 0;
+		padding: 10px;
+		background: url(../imagens/sbbody-l.gif) no-repeat bottom left;
+		font-family: arial;
+	}
+	
+		.box1 .boxbody p
+		{
+			font-size: 75%;
+			margin: 0;
+			padding: 0;
+		}
+		
+		.box1 .boxbody ul
+		{
+			margin: 0;
+			padding: 0;
+		}
+		
+		.box1 .boxbody ul li
+		{
+			font-size: 75%;
+			margin: 0;
+			padding: 0;
+		}
+		
+/*----------------------*/
+/* BOX 2 */
+
+/* Show only to IE PC \*/
+* html .boxhead h2 {height: 1%;} /* For IE 5 PC */
+
+.box2
+{
+	/*float: left;*/
+	/*margin: 0 auto; center for now */
+
+	margin: 0 0 15px 15px;
+	width: 260px;
+	background: url(../imagens/2sbbody-r.gif) no-repeat bottom right;
+}
+
+	.box2 .boxhead
+	{
+		margin: 0;
+		padding: 0;
+		background: url(../imagens/sbhead-r.gif) no-repeat top right;
+		text-align: left;
+	}
+	
+		.box2 .boxhead h2
+		{
+			margin: 0;
+			padding: 5px 30px 3px 24px;
+			color: black;
+			border-bottom: solid 1px #7F7F7F;
+			background: url(../imagens/sbhead-l.gif) no-repeat top left;
+			line-height: 1em;
+			font-weight: bold; 
+			font-size: 75%;
+			font-family: arial;
+		}
+
+	.box2 .boxbody
+	{
+		margin: 0;
+		padding: 10px;
+		background: url(../imagens/sbbody-l.gif) no-repeat bottom left;
+		font-size: 100%;
+		font-family: arial;
+	}
+	
+		.box2 .boxbody p
+		{
+			font-size: 100%;
+			margin: 0;
+			padding: 0;
+		}
+		
+		.box2 .boxbody a
+		{
+			font-weight: bold;
+		}
+
+/*----------------------*/
+
+img
+{
+	border-width: 0;
+}
+
+a
+{
+	color: #003090;
+}
+
+a:hover
+{
+	color: #0000FF;
+}
+
+h1 
+{
+	clear: both;
+	
+	margin: 5px 0 5px 0;
+	font-weight: bold;
+	font-size: 140%;
+	color: #003060;
+}
+
+h2 
+{
+	clear: both;
+	
+	margin: 5px 0 5px 0;
+	font-weight: bold;
+	font-size: 80%;
+	color: #003060;
+
+}
+
+em
+{
+	font-size: 80%;
+}
+
+p
+{
+	font-size: 80%;
+}
+
+/*----------------------*/
+
+#comandos
+{
+	font-size: 70%;
+}
+
+	#comandos ul
+	{
+		margin: 20px 0 20px 20px;
+		padding: 4px 0 0 0;
+		width: 100%;
+		background: url(../imagens/linha.gif) no-repeat top left;		
+	}
+
+	#comandos ul li
+	{
+		display: inline;
+	}
+	
+	#comandos ul li img
+	{
+		float: left;
+	}
+	
+	#comandos ul li a
+	{
+		float: left;
+		display: block;
+		margin: 0 15px 0 5px;
+	}
+
+/*----------------------*/
+
+	#lista-resultado 
+	{
+
+	}
+
+	#lista-resultado dt, #lista-resultado dl 
+	{
+		margin: 0
+	}
+
+	#lista-resultado dt
+	{
+		margin-top: 20px;
+		padding: 0;
+	}
+	
+	#lista-resultado dd 
+	{
+		margin: 0;
+		font-size: 80%;
+	}
+	
+	#lista-resultado dd.cidade, #lista-resultado dd.tipo 
+	{
+		display: inline;
+		font-weight: bold;
+	}
+	
+/*----------------------*/
+
+#estados 
+{
+	overflow: hidden;
+	width: 475px;
+	height: 140px;
+	margin: 0 0 15px 15px;
+	
+	background-color: #E6E5E4;
+}
+	#estados h2
+	{
+		margin: 10px 0 0 15px;
+		font-size: 90%;
+	}
+
+	#estados ul
+	{
+		margin: 0;
+		padding: 0 15px 0 15px;
+		background-color: #E6E5E4;
+	}
+	
+	#estados ul li
+	{
+		display: inline;
+		margin-right: 10px;
+		font-size: 80%;
+		line-height: 150%;
+	}
+	
+	
+#paginacao
+{
+	margin-top: 30px;
+	text-align: center;
+	font-size: 80%;
+}
+
+#paginacao a
+{
+	margin-left: 3px;
+}
+
+#paginacao span
+{
+	margin-left: 3px;
+}
+
+
+#lista-hotel-estado
+{
+	padding: 20px;
+}
+
+#lista-hotel-estado h1
+{
+	margin-top: 0;
+	padding-top: 0;
+}
+
+#lista-hotel-cidade
+{
+	padding: 20px;
+}
+
+#lista-hotel-cidade h1
+{
+	margin-top: 0;
+	padding-top: 0;
+}
+
+
+#lista-hotel-estado ul
+{
+	float:left;
+		
+	width: 30%;
+	list-style-type:disc;
+
+	margin: 0;
+	padding: 20px 20px 10px 20px;
+}
+
+#fale-conosco
+{
+	padding: 20px;
+}
+
+#fale-conosco h1
+{
+	margin-top: 0;
+	padding-top: 0;
+}
+
+#hotel
+{
+	padding: 20px;
+}
+
+#hotel h1
+{
+	margin-top: 0;
+	padding-top: 0;
+}
+
+#filtro
+{
+	padding: 4px;
+	background-color: #ECECEC;
+	font-size: 80%;
+}
+
+#lista-cidade
+{
+	font-size: 80%;
+}
+
+#fale-conosco td
+{
+	font-size: 80%;
+}
+
+#intro
+{
+	position: absolute;
+	top: 265px;
+	right: 15px;
+	background-color: #E6E5E4;
+	width: 200px;
+	height: 140px;
+}
+
+#intro p
+{
+	padding: 10px 10px 0px 10px;
+}

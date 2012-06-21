@@ -1,0 +1,66 @@
+<% content_for(:title) { concat("#{@hotel.name}") } %>
+<% content_for(:meta) { concat("#{@hotel.name}") } %>
+    <div id="navigation">
+        <div id="navbase">&nbsp;</div>
+    </div>
+
+    <div id="main">
+        
+
+<div id="breadcrumb">
+    <a href="default.aspx">Página Principal</a> > <%= @hotel.name %>
+</div>
+
+<div id="hotel">
+
+<h1><%= @hotel.name %></h1>
+
+<h2><%= @hotel.city %> - <%= @hotel.state %></h2>
+
+<% if !@hotel.description.blank? -%>
+<p><%= @hotel.description %></p>
+<% end -%>
+
+<% if !@hotel.category_slug.blank? -%>
+<p>
+<strong>Categoria</strong>
+<br /><%= @hotel.category_slug %>
+</p>
+<% end -%>
+
+<% if !@hotel.site.blank? -%>
+<p>
+<strong>Internet</strong>
+<br /><a href="<%= @hotel.site %>" target="_blank"><%= @hotel.site %></a>
+</p>
+<% end -%>
+
+<p>
+<strong>Localização</strong>
+<%= raw("<br />Endereço: #{@hotel.address}") unless @hotel.address.blank? %>
+<%= raw("<br />Bairro: #{@hotel.neighborhood}") unless @hotel.neighborhood.blank? %>
+<%= raw("<br />Cidade: #{@hotel.city}") unless @hotel.city.blank? %>
+<%= raw("<br />Estado: #{@hotel.state.upcase}") unless @hotel.state.blank? %>
+<%= raw("<br />CEP: #{@hotel.zipcode}") unless @hotel.zipcode.blank? %>
+</p>
+
+<% if !@hotel.phone1.blank? -%>
+<p>
+<strong>Contato</strong>
+<br />Telefone(s): <%= @hotel.phone1 %>
+<%= " ou #{@hotel.phone2}" if !@hotel.phone2.blank? %>
+<%= raw("<br />Fax: #{@hotel.fax}") unless @hotel.fax.blank? %>
+</p>
+<% end -%>
+
+</div>
+
+
+<div id="comandos">
+    <ul>
+        <li><img src="imagens/001.gif" /><a href="javascript:addFavorites('http://www.hoteisnow.com/<%= @hotel.slug %>.aspx','<%= @hotel.name %>')">Adicionar aos favoritos</a></li>
+
+    </ul>
+</div>
+            
+    </div>

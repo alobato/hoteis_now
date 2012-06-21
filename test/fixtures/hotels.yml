@@ -1,0 +1,47 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  slug: MyString
+  state: MyString
+  city: MyString
+  site: MyString
+  name: MyString
+  priority: 1
+  disabled: 1
+  situation: 1
+  hotel_type: MyString
+  description: MyString
+  neighborhood: MyString
+  address: MyString
+  zipcode: MyString
+  phone1: MyString
+  phone2: MyString
+  fax: MyString
+  hotel_email: MyString
+  stars: 1
+  contact_name: MyString
+  contact_email: MyString
+  contact_function: MyString
+
+two:
+  slug: MyString
+  state: MyString
+  city: MyString
+  site: MyString
+  name: MyString
+  priority: 1
+  disabled: 1
+  situation: 1
+  hotel_type: MyString
+  description: MyString
+  neighborhood: MyString
+  address: MyString
+  zipcode: MyString
+  phone1: MyString
+  phone2: MyString
+  fax: MyString
+  hotel_email: MyString
+  stars: 1
+  contact_name: MyString
+  contact_email: MyString
+  contact_function: MyString

@@ -1,0 +1,60 @@
+<% content_for(:title) { concat("#{@host_type} #{@city_prep} #{@city_name}") } %>
+<% content_for(:meta) { concat("#{@host_type} #{@city_prep} #{@city_name}") } %>
+    <div id="navigation">
+        <div id="navbase">&nbsp;</div>
+    </div>
+
+    <div id="main">
+        
+
+<div id="breadcrumb">
+    <a href="default.aspx">Página Principal</a> > <%= @host_type %> <%= @city_prep %> <%= @city_name %>
+</div>
+
+<div id="lista-hotel-cidade">
+
+<h1><%= @host_type %> <%= @city_prep %> <%= @city_name %></h1>
+
+<div id="filtro">
+Filtrar Tipo: <a href="<%= @city_slug %>.aspx">Todos</a> | <a href="hoteis-<%= @city_slug %>.aspx">Hotel</a> | <a href="pousadas-<%= @city_slug %>.aspx">Pousada</a> | <a href="hoteis-fazenda-<%= @city_slug %>.aspx">Hotel-Fazenda</a> | <a href="moteis-<%= @city_slug %>.aspx">Motel</a> | <a href="albergues-<%= @city_slug %>.aspx">Albergue</a> | <a href="flats-<%= @city_slug %>.aspx">Flat</a> | <a href="resorts-<%= @city_slug %>.aspx">Resort</a> | <a href="spas-<%= @city_slug %>.aspx">Spa</a> | <a href="campings-<%= @city_slug %>.aspx">Camping</a> | <a href="apart-hoteis-<%= @city_slug %>.aspx">Apart-Hotel</a> | <a href="alugueis-temporada-<%= @city_slug %>.aspx">Aluguel Temporada</a>
+</div>
+
+<div style="margin-top:25px;margin-bottom:50px;">
+<script type="text/javascript"><!--
+google_ad_client = "pub-7728669863392388";
+google_alternate_ad_url = "http://www.hoteisnow.com/google_adsense_script.html";
+google_ad_width = 300;
+google_ad_height = 250;
+google_ad_format = "300x250_as";
+google_ad_type = "text";
+google_ad_channel ="";
+google_color_border = "FFFFFF";
+google_color_link = "003090";
+google_color_bg = "FFFFFF";
+google_color_text = "000000";
+google_color_url = "000000";
+//--></script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+
+
+<div id="lista-resultado">
+<% @hotels.each do |hotel| %>
+
+            <dl>
+                <dt><a href="<%= hotel.slug %>.aspx"><%= hotel.name %></a></dt>
+                <dd class="descricao"><%= hotel.description %></dd>
+                <dd class="cidade"><%= hotel.city %></dd>
+                <dd class="tipo"><%= hotel.hotel_type_slug %></dd>
+            </dl>
+<% end %>
+</div>    
+    <div id="paginacao">
+<%= paginate @hotels %>
+</div>
+
+</div>
+            
+    </div>
